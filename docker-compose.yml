@@ -1,0 +1,24 @@
+services:
+  medscheduler-api:
+    build:
+      context: .
+      dockerfile: src/MedScheduler.API/Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: medscheduler
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
