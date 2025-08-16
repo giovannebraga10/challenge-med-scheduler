@@ -16,11 +16,10 @@ namespace MedScheduler.Domain.Entities
 
         private User(){}
 
-        public User(string name, string email, string passwordHash, UserEnum role, Guid specialityId)
+        private User(string name, string email, string passwordHash, UserEnum role, Guid specialityId)
         {
             Id = Guid.NewGuid();
             Name = name;
-            IsValidEmail(email);
             Email = email;
             PasswordHash = passwordHash;
             CreatedAt = DateTime.Now;
@@ -28,11 +27,29 @@ namespace MedScheduler.Domain.Entities
             SpecialityId = specialityId;
         }
 
-        private void IsValidEmail(string email)
+        private static bool IsValidEmail(string email)
         {
             var addr = new MailAddress(email);
-            if (addr.Address == email) Email = email; 
-            throw new ArgumentException("Invalid email format.");
+            return addr.Address == email ? true : false;
+        }
+
+        public static User Create(string name, string email, string passwordHash, UserEnum role, Guid specialityId)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("Name must be provided.");
+
+            if (IsValidEmail(email))
+                throw new ArgumentException("Email format invalid.");
+
+            if (string.IsNullOrWhiteSpace(passwordHash))
+                throw new ArgumentException("Password must be provided.");
+
+            if (role == UserEnum.Doctor && specialityId == Guid.Empty)
+                throw new ArgumentException("SpecialityId must be provided for doctors.");
+
+            var user = new User(name, email, passwordHash, role, specialityId);
+
+            return user;
         }
     }
 

@@ -15,5 +15,19 @@ namespace MedScheduler.Domain.Entities
         {
 
         }
+
+        private Speciality(string name)
+        {
+            Id = Guid.NewGuid();
+            Name = name;
+        }
+
+        public static Speciality Create(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("Name must be provided.");
+
+            return new Speciality(name);
+        }   
     }
 }
