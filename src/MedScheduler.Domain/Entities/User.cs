@@ -1,4 +1,5 @@
-﻿using System.Net.Mail;
+﻿using MedScheduler.Domain.Enums;
+using System.Net.Mail;
 
 namespace MedScheduler.Domain.Entities
 {
@@ -9,7 +10,7 @@ namespace MedScheduler.Domain.Entities
         public string Email {get; private set;}
         public string PasswordHash {get; private set;}
         public DateTime CreatedAt {get; private set;}
-        public Enum Role {get; private set;}
+        public UserEnum Role {get; private set;}
         public Guid ? SpecialityId {get; private set;} 
 
 

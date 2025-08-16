@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("MedScheduler.Infrastructure")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("MedScheduler.Application")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30dcabde5038a062789bfd6122991cb6d96f168a")]
-[assembly: System.Reflection.AssemblyProductAttribute("MedScheduler.Infrastructure")]
-[assembly: System.Reflection.AssemblyTitleAttribute("MedScheduler.Infrastructure")]
+[assembly: System.Reflection.AssemblyProductAttribute("MedScheduler.Application")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MedScheduler.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
