@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D8D5374-663D-4E7E-BA34-0521B30565C3}|src\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj|c:\\users\\giovanne\\source\\repos\\challenge-med-scheduler\\src\\medscheduler.infrastructure\\medscheduler.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6D8D5374-663D-4E7E-BA34-0521B30565C3}|src\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj|solutionrelative:src\\medscheduler.infrastructure\\medscheduler.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{506B9040-7174-48D5-B04E-AD8695E722B8}|src\\MedScheduler.Domain\\MedScheduler.Domain.csproj|c:\\users\\giovanne\\source\\repos\\challenge-med-scheduler\\src\\medscheduler.domain\\medscheduler.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{506B9040-7174-48D5-B04E-AD8695E722B8}|src\\MedScheduler.Domain\\MedScheduler.Domain.csproj|solutionrelative:src\\medscheduler.domain\\medscheduler.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC3FB20-64F1-4E33-B488-955E264329D0}|src\\MedScheduler.Application\\MedScheduler.Application.csproj|c:\\users\\giovanne\\source\\repos\\challenge-med-scheduler\\src\\medscheduler.application\\medscheduler.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6CC3FB20-64F1-4E33-B488-955E264329D0}|src\\MedScheduler.Application\\MedScheduler.Application.csproj|solutionrelative:src\\medscheduler.application\\medscheduler.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3085CE95-76B2-4942-AA02-36C763470F7A}|src\\MedScheduler.API\\MedScheduler.API.csproj|c:\\users\\giovanne\\source\\repos\\challenge-med-scheduler\\src\\medscheduler.api\\medscheduler.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3085CE95-76B2-4942-AA02-36C763470F7A}|src\\MedScheduler.API\\MedScheduler.API.csproj|solutionrelative:src\\medscheduler.api\\medscheduler.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MedScheduler.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj",
+              "RelativeToolTip": "src\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-16T16:42:44.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MedScheduler.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.Domain\\MedScheduler.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\MedScheduler.Domain\\MedScheduler.Domain.csproj",
+              "ToolTip": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.Domain\\MedScheduler.Domain.csproj",
+              "RelativeToolTip": "src\\MedScheduler.Domain\\MedScheduler.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-16T16:42:40.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MedScheduler.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.Application\\MedScheduler.Application.csproj",
+              "RelativeDocumentMoniker": "src\\MedScheduler.Application\\MedScheduler.Application.csproj",
+              "ToolTip": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.Application\\MedScheduler.Application.csproj",
+              "RelativeToolTip": "src\\MedScheduler.Application\\MedScheduler.Application.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-16T16:42:32.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MedScheduler.API.csproj",
+              "DocumentMoniker": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.API\\MedScheduler.API.csproj",
+              "RelativeDocumentMoniker": "src\\MedScheduler.API\\MedScheduler.API.csproj",
+              "ToolTip": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\src\\MedScheduler.API\\MedScheduler.API.csproj",
+              "RelativeToolTip": "src\\MedScheduler.API\\MedScheduler.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-16T16:42:15.461Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
