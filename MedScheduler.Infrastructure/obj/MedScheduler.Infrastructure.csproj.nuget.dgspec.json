@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Infrastructure\\MedScheduler.Infrastructure.csproj": {}
+    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj": {}
   },
   "projects": {
     "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Domain\\MedScheduler.Domain.csproj": {
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Infrastructure\\MedScheduler.Infrastructure.csproj": {
+    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Infrastructure\\MedScheduler.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj",
         "projectName": "MedScheduler.Infrastructure",
-        "projectPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Infrastructure\\MedScheduler.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Giovanne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Giovanne\\AppData\\Roaming\\NuGet\\NuGet.Config",

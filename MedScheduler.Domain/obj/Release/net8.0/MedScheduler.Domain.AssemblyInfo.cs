@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedScheduler.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac25f4a4b197cb70088c382658e28925544a81b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eabb0900d9723e8c7eff7760ef0bdb24c152f861")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedScheduler.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedScheduler.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

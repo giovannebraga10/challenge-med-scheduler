@@ -506,11 +506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\challenge-med-scheduler\\MedScheduler.API.csproj",
+      "projectUniqueName": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.API\\MedScheduler.API.csproj",
       "projectName": "MedScheduler.API",
-      "projectPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\challenge-med-scheduler\\MedScheduler.API.csproj",
+      "projectPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.API\\MedScheduler.API.csproj",
       "packagesPath": "C:\\Users\\Giovanne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\challenge-med-scheduler\\obj\\",
+      "outputPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Giovanne\\AppData\\Roaming\\NuGet\\NuGet.Config",

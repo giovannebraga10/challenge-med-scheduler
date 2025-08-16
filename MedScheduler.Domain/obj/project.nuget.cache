@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZV9mJ51QaMs=",
+  "dgSpecHash": "KirGMc8/zyI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Domain\\MedScheduler.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Domain\\MedScheduler.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

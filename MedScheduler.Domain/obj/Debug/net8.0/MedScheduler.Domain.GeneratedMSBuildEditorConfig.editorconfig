@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MedScheduler.Domain
-build_property.ProjectDir = C:\Users\Giovanne\source\repos\challenge-med-scheduler\Domain\
+build_property.ProjectDir = C:\Users\Giovanne\source\repos\challenge-med-scheduler\MedScheduler.Domain\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

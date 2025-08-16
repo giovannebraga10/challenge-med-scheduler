@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.API", "challenge-med-scheduler\MedScheduler.API.csproj", "{3085CE95-76B2-4942-AA02-36C763470F7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.API", "MedScheduler.API\MedScheduler.API.csproj", "{3085CE95-76B2-4942-AA02-36C763470F7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.Domain", "Domain\MedScheduler.Domain.csproj", "{506B9040-7174-48D5-B04E-AD8695E722B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.Domain", "MedScheduler.Domain\MedScheduler.Domain.csproj", "{506B9040-7174-48D5-B04E-AD8695E722B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.Infrastructure", "Infrastructure\MedScheduler.Infrastructure.csproj", "{6D8D5374-663D-4E7E-BA34-0521B30565C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.Infrastructure", "MedScheduler.Infrastructure\MedScheduler.Infrastructure.csproj", "{6D8D5374-663D-4E7E-BA34-0521B30565C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.Application", "Application\MedScheduler.Application.csproj", "{6CC3FB20-64F1-4E33-B488-955E264329D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedScheduler.Application", "MedScheduler.Application\MedScheduler.Application.csproj", "{6CC3FB20-64F1-4E33-B488-955E264329D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

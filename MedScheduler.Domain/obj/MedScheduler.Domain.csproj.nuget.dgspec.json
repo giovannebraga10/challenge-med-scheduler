@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Domain\\MedScheduler.Domain.csproj": {}
+    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Domain\\MedScheduler.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Domain\\MedScheduler.Domain.csproj": {
+    "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Domain\\MedScheduler.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Domain\\MedScheduler.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Domain\\MedScheduler.Domain.csproj",
         "projectName": "MedScheduler.Domain",
-        "projectPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Domain\\MedScheduler.Domain.csproj",
+        "projectPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Domain\\MedScheduler.Domain.csproj",
         "packagesPath": "C:\\Users\\Giovanne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Giovanne\\AppData\\Roaming\\NuGet\\NuGet.Config",

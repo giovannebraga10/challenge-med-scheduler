@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w8gAnW5sPWw=",
+  "dgSpecHash": "Vu0rExPOFkk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\Infrastructure\\MedScheduler.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Giovanne\\source\\repos\\challenge-med-scheduler\\MedScheduler.Infrastructure\\MedScheduler.Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

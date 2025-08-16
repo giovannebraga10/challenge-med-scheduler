@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedScheduler.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc3f0fc4fa1a60fe2a135892fc24273432ba37ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eabb0900d9723e8c7eff7760ef0bdb24c152f861")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedScheduler.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedScheduler.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
