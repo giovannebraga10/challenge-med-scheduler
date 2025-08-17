@@ -1,4 +1,5 @@
-﻿using MedScheduler.Domain.Interfaces;
+﻿using MedScheduler.Domain.Dtos;
+using MedScheduler.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace MedScheduler.Infrastructure.Repositories.Appointmenties
@@ -18,5 +19,20 @@ namespace MedScheduler.Infrastructure.Repositories.Appointmenties
             _context.Appointments.AddAsync(appointment);
             return _context.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<DoctorUnavailableAppointmentsDto>> GetUnavailableAppointmentsAsync(IEnumerable<DoctorDto> doctorDtos, DateTime appointmentDateTime) {
+
+            var doctorIds = doctorDtos.Select(x => x.Id).ToList();
+
+            return await _context.Appointments
+                .Where(a => doctorIds.Contains(a.DoctorId) && a.AppointmentDate.Date == appointmentDateTime.Date)
+                .GroupBy(a => a.DoctorId)
+                .Select(g => new DoctorUnavailableAppointmentsDto
+                {
+                    DoctorId = g.Key,
+                    DoctorName = doctorDtos.First(d => d.Id == g.Key).Name,
+                    UnavailableTimes = g.Select(a => a.AppointmentDate).ToList()
+                }).ToListAsync();
+                }
     }
 }

@@ -1,27 +1,21 @@
-﻿using MedScheduler.Domain.Entities;
+﻿using MedScheduler.Application.Interfaces;
+using MedScheduler.Domain.Entities;
 using MedScheduler.Domain.Interfaces;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 
-public class OpenAiMedicalService
+public class OpenAiMedicalService (HttpClient httpClient, ISpecialityRepository specialityRepository) : IOpenAiMedicalService
 {
-    private readonly HttpClient _httpClient;
-    private readonly ISpecialityRepository _specialityRepository;
-    private readonly string _apiKey;
-
-    public OpenAiMedicalService(HttpClient httpClient, ISpecialityRepository specialityRepository)
-    {
-        _httpClient = httpClient;
-        _specialityRepository = specialityRepository;
-        _apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") ?? "";
-
-        _httpClient.DefaultRequestHeaders.Authorization =
-            new AuthenticationHeaderValue("Bearer", _apiKey);
-    }
+    private readonly HttpClient _httpClient = httpClient;
+    private readonly string _apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") ?? "";
 
     public async Task<Speciality?> GetSpecialtyAsync(string symptoms)
     {
+
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+         
         var requestBody = new
         {
             model = "gpt-3.5-turbo",
@@ -45,12 +39,12 @@ public class OpenAiMedicalService
             .GetString() ?? "";
 
 
-        var specialties = await _specialityRepository.GetAllSpecialitiesAsync();
+        var specialties = await specialityRepository.GetAllSpecialitiesAsync();
 
         var matchedSpecialty = specialties
             .FirstOrDefault(s => suggestedSpecialty.Contains(s.Name, StringComparison.OrdinalIgnoreCase));
 
-       return matchedSpecialty != null ? matchedSpecialty : specialties.Where(s => s.Name == "Clínico Geral").FirstOrDefault();
+        return matchedSpecialty != null ? matchedSpecialty : specialties.FirstOrDefault(s => s.Name == "Clínico Geral");
 
     }
 }

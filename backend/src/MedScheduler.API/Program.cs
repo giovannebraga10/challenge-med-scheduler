@@ -1,3 +1,4 @@
+using MedScheduler.Application.Interfaces;
 using MedScheduler.Domain.Interfaces;
 using MedScheduler.Infrastructure;
 using MedScheduler.Infrastructure.Repositories.Appointmenties;
@@ -24,6 +25,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISpecialityRepository, SpecialityRepository>();
+
+//Inj Dependencia Application Services
+builder.Services.AddScoped<IOpenAiMedicalService, OpenAiMedicalService>();
+
 
 var app = builder.Build();
 

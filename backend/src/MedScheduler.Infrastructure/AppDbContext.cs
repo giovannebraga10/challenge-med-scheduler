@@ -33,6 +33,7 @@ namespace MedScheduler.Infrastructure
                 entity.HasKey(e => e.Id);
                 entity.Property(a => a.PatientId);
                 entity.Property(a => a.DoctorId);
+                entity.Property(a => a.IsAvailable);
                 entity.Property(a => a.AppointmentDate);
             });
 

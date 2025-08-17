@@ -1,4 +1,5 @@
-﻿using MedScheduler.Domain.Entities;
+﻿using MedScheduler.Domain.Dtos;
+using MedScheduler.Domain.Entities;
 
 namespace MedScheduler.Domain.Interfaces
 {
@@ -6,6 +7,7 @@ namespace MedScheduler.Domain.Interfaces
     {
         Task<User?> GetUserByIdAsync(Guid id);
         Task AddUserAsync(User user);
+        Task<List<DoctorDto>> GetDoctorsBySpecialityAsync(Guid specialityId);
 
     }
 }

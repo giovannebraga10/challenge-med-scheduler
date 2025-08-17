@@ -9,6 +9,7 @@ public class Appointment
     public string Symtoms { get; private set; } = string.Empty;
     public string SpecialitySuggested { get; private set; } = string.Empty;
     public AppointmentsStatusEnum Status { get; private set; }
+    public bool IsAvailable { get; private set; }
     public DateTime CreatedAt { get; private set; }
 
     private Appointment(Guid patientId, Guid doctorId, DateTime appointmentDate, string symtoms, string specialitySuggested)
@@ -20,6 +21,7 @@ public class Appointment
         Symtoms = symtoms;
         SpecialitySuggested = specialitySuggested;
         Status = AppointmentsStatusEnum.Confirmed;
+        IsAvailable = false;
         CreatedAt = DateTime.Now;
     }
 
@@ -40,5 +42,14 @@ public class Appointment
             throw new ArgumentException("Appointment date cannot be in the past.");
 
         return new Appointment(patientId, doctorId, appointmentDate, symtoms, specialitySuggested);
+    }
+
+    public void Cancel()
+    {
+        if (Status == AppointmentsStatusEnum.Completed || Status == AppointmentsStatusEnum.Canceled)
+            throw new InvalidOperationException("Cannot cancel a completed or already canceled appointment.");
+
+        Status = AppointmentsStatusEnum.Canceled;
+        IsAvailable = true;
     }
 }
