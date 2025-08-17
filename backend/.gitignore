@@ -1,2 +1,63 @@
+# Visual Studio
 .vs/
-Application/obj/
+.env
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Rider
+.idea/
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+*.snupkg
+
+# ASP.NET
+wwwroot/
+appsettings.*.json
+
+# Logs
+*.log
+*.tlog
+*.vspscc
+*_i.c
+*_p.c
+*_h.h
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Database
+*.mdf
+*.ldf
+*.ndf
+
+# Publish
+*.publishsettings
+*.pubxml
+*.pubxml.user
+
+# Others
+*.cache
+*.bak
+*.tmp
+*.userprefs
+

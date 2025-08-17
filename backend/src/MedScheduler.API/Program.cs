@@ -1,4 +1,8 @@
+using MedScheduler.Domain.Interfaces;
 using MedScheduler.Infrastructure;
+using MedScheduler.Infrastructure.Repositories.Appointmenties;
+using MedScheduler.Infrastructure.Repositories.Specialities;
+using MedScheduler.Infrastructure.Repositories.Users;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +18,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+//Inj Dependencia Repositories
+
+builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ISpecialityRepository, SpecialityRepository>();
 
 var app = builder.Build();
 
