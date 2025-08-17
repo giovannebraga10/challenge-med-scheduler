@@ -14,13 +14,15 @@ namespace MedScheduler.Infrastructure.Repositories.Appointmenties
             await _context.SaveChangesAsync();
         }
 
-        public Task AddAppointmentAsync(Appointment appointment)
+        public async Task<Guid> AddAppointmentAsync(Appointment appointment)
         {
-            _context.Appointments.AddAsync(appointment);
-            return _context.SaveChangesAsync();
+            await _context.Appointments.AddAsync(appointment);
+            await _context.SaveChangesAsync();
+            return appointment.Id;
         }
 
-        public async Task<IEnumerable<DoctorUnavailableAppointmentsDto>> GetUnavailableAppointmentsAsync(IEnumerable<DoctorDto> doctorDtos, DateTime appointmentDateTime) {
+        public async Task<IEnumerable<DoctorUnavailableAppointmentsDto>> GetUnavailableAppointmentsAsync(IEnumerable<DoctorDto> doctorDtos, DateTime appointmentDateTime)
+        {
 
             var doctorIds = doctorDtos.Select(x => x.Id).ToList();
 
@@ -33,6 +35,11 @@ namespace MedScheduler.Infrastructure.Repositories.Appointmenties
                     DoctorName = doctorDtos.First(d => d.Id == g.Key).Name,
                     UnavailableTimes = g.Select(a => a.AppointmentDate).ToList()
                 }).ToListAsync();
-                }
+        }
+         
+        public async Task<bool> AppointmentWasAvailable(DateTime appointmentDate, Guid doctorId)
+        {
+            return !await _context.Appointments.AnyAsync(a => a.DoctorId == doctorId && a.AppointmentDate == appointmentDate); ;
+        }
     }
 }
