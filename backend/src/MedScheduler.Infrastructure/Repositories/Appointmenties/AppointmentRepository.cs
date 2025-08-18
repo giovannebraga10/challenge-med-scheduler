@@ -7,11 +7,12 @@ namespace MedScheduler.Infrastructure.Repositories.Appointmenties
     public class AppointmentRepository(AppDbContext _context) : IAppointmentRepository
     {
         public async Task<IEnumerable<Appointment>> GetAllAppointmentsAsync() => await _context.Appointments.ToListAsync();
-
-        public async Task UpdateStatusAppointmentAsync(Appointment appointment)
+        public async Task<Appointment?> GetAppointmentById(Guid id) => await _context.Appointments.FindAsync(id);
+        public async Task<bool> UpdateStatusAppointmentAsync(Appointment appointment)
         {
             _context.Appointments.Update(appointment);
             await _context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<Guid> AddAppointmentAsync(Appointment appointment)
