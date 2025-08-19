@@ -22,5 +22,12 @@ namespace MedScheduler.API.Controllers
                 return Unauthorized(new { Message = ex.Message });
             }
         }
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterRequestDto dto)
+        {
+            var command = new RegisterCommand(dto.Name, dto.Email, dto.Password, dto.Role, dto.specialityId);
+            var response = await _mediator.Send(command);
+            return Ok(response);
+        }
     }
 }
