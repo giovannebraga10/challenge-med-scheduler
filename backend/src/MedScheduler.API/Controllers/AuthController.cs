@@ -1,7 +1,6 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using MedScheduler.Application.Commands;
-using MedScheduler.Application.Dtos;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MedScheduler.API.Controllers
 {
