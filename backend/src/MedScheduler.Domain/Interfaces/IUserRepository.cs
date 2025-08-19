@@ -6,6 +6,7 @@ namespace MedScheduler.Domain.Interfaces
     public interface IUserRepository
     {
         Task<User?> GetUserByIdAsync(Guid id);
+        Task<User?> GetUserByEmailAsync(string email);
         Task AddUserAsync(User user);
         Task<List<DoctorDto>> GetDoctorsBySpecialityAsync(Guid specialityId);
 

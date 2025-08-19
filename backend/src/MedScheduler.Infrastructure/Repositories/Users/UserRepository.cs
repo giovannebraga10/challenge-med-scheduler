@@ -9,6 +9,8 @@ namespace MedScheduler.Infrastructure.Repositories.Users
     {
         public async Task<User?> GetUserByIdAsync(Guid id) => await _context.Users.FindAsync(id);
 
+        public async Task<User?> GetUserByEmailAsync(string email) => await _context.Users.SingleOrDefaultAsync(u => u.Email == email);
+
         public async Task<List<DoctorDto>> GetDoctorsBySpecialityAsync(Guid specialityId) =>
            await _context.Users.Where(u => u.SpecialityId == specialityId)
                                .Select(x => new DoctorDto {
