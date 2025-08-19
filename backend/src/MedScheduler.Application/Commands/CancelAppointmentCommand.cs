@@ -2,8 +2,5 @@
 
 namespace MedScheduler.Application.Commands
 {
-    public class CancelAppointmentCommand : IRequest<bool>
-    {
-        public Guid AppointmentId { get; set; }
-    }
+    public record CancelAppointmentCommand(Guid AppointmentId) : IRequest<bool>;
 }

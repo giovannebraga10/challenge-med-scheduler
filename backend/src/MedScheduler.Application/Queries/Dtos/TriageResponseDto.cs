@@ -12,7 +12,7 @@ namespace MedScheduler.Application.Queries.Dtos
     public class TriageResponseDto
     {
         public IEnumerable<DoctorUnavailableAppointmentsDto> UnavailableAppointments { get; set; }
-        public string Symtoms { get; set; }
+        public string Symptoms { get; set; }
         public DateTime AppointmentDateTime { get; set; }
 
     }
