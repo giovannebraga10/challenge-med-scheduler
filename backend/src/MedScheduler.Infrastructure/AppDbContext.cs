@@ -37,6 +37,18 @@ namespace MedScheduler.Infrastructure
                 entity.Property(a => a.AppointmentDate);
             });
 
+            modelBuilder.Entity<Appointment>()
+                .HasOne(a => a.Patient)
+                .WithMany()
+                .HasForeignKey(a => a.PatientId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Appointment>()
+                .HasOne(a => a.Doctor)
+                .WithMany()
+                .HasForeignKey(a => a.DoctorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Speciality>(entity =>
             {
                 entity.HasKey(e => e.Id);

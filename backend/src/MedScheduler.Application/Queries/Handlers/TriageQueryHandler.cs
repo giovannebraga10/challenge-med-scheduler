@@ -21,7 +21,7 @@ namespace MedScheduler.Application.Queries.Handlers
             return new TriageResponseDto
             {
                 UnavailableAppointments = unavailableAppointments,
-                Symtoms = request.Symtoms,
+                Symptoms = request.Symtoms,
                 AppointmentDateTime = request.AppointmentDate
             };
         }

@@ -1,10 +1,13 @@
-﻿using MedScheduler.Domain.Enums;
+﻿using MedScheduler.Domain.Entities;
+using MedScheduler.Domain.Enums;
 
 public class Appointment
 {
     public Guid Id { get; private set; }
     public Guid PatientId { get; private set; }
     public Guid DoctorId { get; private set; }
+    public User Patient { get; private set; } = null!;
+    public User Doctor { get; private set; } = null!;
     public DateTime AppointmentDate { get; private set; }
     public string Symtoms { get; private set; } = string.Empty;
     public string SpecialitySuggested { get; private set; } = string.Empty;

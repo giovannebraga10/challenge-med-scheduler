@@ -61,28 +61,6 @@ namespace challenge_med_scheduler.Controllers
             }
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAppointments()
-        {
-            try
-            {
-            var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "id")?.Value;
-            if (string.IsNullOrEmpty(userIdClaim))
-                return Unauthorized();
-
-            var userId = Guid.Parse(userIdClaim);
-
-            var query = new GetAppointmentsByUserIdQuery(userId);
-            var appointments = await _mediator.Send(query);
-
-            return Ok(appointments);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { Message = ex.Message });
-            }
-        }
-
         [HttpGet("my-appointments-by-date")]
         public async Task<IActionResult> GetAppointmentsByDate([FromQuery] DateTime appointmentDate)
         {

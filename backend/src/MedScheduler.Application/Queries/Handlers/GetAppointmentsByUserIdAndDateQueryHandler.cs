@@ -5,12 +5,25 @@ using MedScheduler.Domain.Interfaces;
 namespace MedScheduler.Application.Queries.Handlers
 {
     public class GetAppointmentsByUserIdAndDateQueryHandler(
-        IUserRepository _userRepository
+        IAppointmentRepository _appointmentRepository
         ) : IRequestHandler<GetAppointmentsByUserIdAndDateQuery, IEnumerable<AppointmentResponseDto>>
     {
-        public Task<IEnumerable<AppointmentResponseDto>> Handle(GetAppointmentsByUserIdAndDateQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<AppointmentResponseDto>> Handle(GetAppointmentsByUserIdAndDateQuery request, CancellationToken cancellationToken)
         {
-            var appointments = _userRepository.GetAppointmentsByUserIdAndDateAsync(request.userId, request.appointmentDate);
+            var appointments = await _appointmentRepository.GetAppointmentsByUserIdAsync(request.userId);
+            var filteredAppointments = appointments
+                    .Where(a => a.AppointmentDate.Date == request.appointmentDate.Date)
+                    .Select(a => new AppointmentResponseDto
+                    {
+                        AppointmentId = a.Id,
+                        Name = a.Patient.Name,
+                        DoctorName = a.Doctor.Name,
+                        AppointmentDate = a.AppointmentDate,
+                        Speciality = a.SpecialitySuggested
+
+                    });
+
+            return filteredAppointments;
         }
     }
 }

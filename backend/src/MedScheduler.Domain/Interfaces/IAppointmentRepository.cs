@@ -11,5 +11,7 @@ namespace MedScheduler.Domain.Interfaces
         Task<Guid> AddAppointmentAsync(Appointment appointment);
         Task<IEnumerable<DoctorUnavailableAppointmentsDto>> GetUnavailableAppointmentsAsync(IEnumerable<DoctorDto> doctorDtos, DateTime appointmentDateTime);
         Task<bool> AppointmentWasAvailable(DateTime appointmentDate, Guid doctorId);
+        Task<List<Appointment>> GetAppointmentsByUserIdAsync(Guid userId);
+
     }
 }

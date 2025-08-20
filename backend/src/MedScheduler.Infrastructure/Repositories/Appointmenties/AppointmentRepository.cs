@@ -42,5 +42,15 @@ namespace MedScheduler.Infrastructure.Repositories.Appointmenties
         {
             return !await _context.Appointments.AnyAsync(a => a.DoctorId == doctorId && a.AppointmentDate == appointmentDate); ;
         }
+
+        public async Task<List<Appointment>> GetAppointmentsByUserIdAsync(Guid userId)
+        {
+            return await _context.Appointments
+                .Include(a => a.Doctor)
+                .Include(a => a.Patient)
+                .Where(a => (a.PatientId == userId || a.DoctorId == userId) && a.AppointmentDate > DateTime.Now)
+                .ToListAsync();
+        }
+
     }
 }

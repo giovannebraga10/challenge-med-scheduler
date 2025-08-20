@@ -16,7 +16,7 @@ namespace MedScheduler.Application.Commands.Handlers
             var userExist = await _userRepository.GetUserByEmailAsync(request.Email);
             if (userExist != null)
             {
-                throw new Exception("User already exists");
+                throw new Exception("User already exists");  
             }
 
             var hashedPassword = _userService.HashPassword(request.Password);
