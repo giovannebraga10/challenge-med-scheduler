@@ -1,4 +1,5 @@
 using MedScheduler.Application.Interfaces;
+using MedScheduler.Application.Services;
 using MedScheduler.Domain.Interfaces;
 using MedScheduler.Infrastructure;
 using MedScheduler.Infrastructure.Repositories.Appointmenties;
@@ -30,8 +31,12 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISpecialityRepository, SpecialityRepository>();
 
 //Inj Dependencia Application Services
-builder.Services.AddScoped<IOpenAiMedicalService, OpenAiMedicalService>();
+builder.Services.AddHttpClient<IOpenAiMedicalService, OpenAiMedicalService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 var app = builder.Build();
 
@@ -41,6 +46,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 
