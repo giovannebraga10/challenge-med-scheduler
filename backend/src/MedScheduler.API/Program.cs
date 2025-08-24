@@ -1,3 +1,5 @@
+using DotNetEnv;
+using MedScheduler.Application.Commands;
 using MedScheduler.Application.Interfaces;
 using MedScheduler.Application.Services;
 using MedScheduler.Domain.Interfaces;
@@ -15,14 +17,31 @@ builder.Services.AddControllers();
 
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 
+Env.Load("../../.env");
+
+var host = Environment.GetEnvironmentVariable("DB_HOST") ?? "db";
+var db = Environment.GetEnvironmentVariable("DB_NAME");
+var user = Environment.GetEnvironmentVariable("DB_USER");
+var password = Environment.GetEnvironmentVariable("DB_PASSWORD");
+
+var connectionString = $"Host={host};Database={db};Username={user};Password={password}";
+
+Console.WriteLine(connectionString);
+
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(typeof(RegisterCommand).Assembly));
+
+
 
 //Inj Dependencia Repositories
 

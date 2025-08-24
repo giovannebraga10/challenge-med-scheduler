@@ -38,7 +38,7 @@ namespace MedScheduler.Domain.Entities
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Name must be provided.");
 
-            if (IsValidEmail(email))
+            if (!IsValidEmail(email))
                 throw new ArgumentException("Email format invalid.");
 
             if (string.IsNullOrWhiteSpace(passwordHash))

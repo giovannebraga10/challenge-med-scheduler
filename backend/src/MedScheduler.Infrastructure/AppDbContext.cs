@@ -1,5 +1,6 @@
 ﻿using MedScheduler.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MedScheduler.Infrastructure
 {
@@ -16,6 +17,30 @@ namespace MedScheduler.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            var dateTimeConverter = new ValueConverter<DateTime, DateTime>(
+                v => v.Kind == DateTimeKind.Utc ? v : v.ToUniversalTime(),
+                v => DateTime.SpecifyKind(v, DateTimeKind.Utc)
+            );
+
+            var nullableDateTimeConverter = new ValueConverter<DateTime?, DateTime?>(
+                v => v.HasValue ? (v.Value.Kind == DateTimeKind.Utc ? v.Value : v.Value.ToUniversalTime()) : v,
+                v => v.HasValue ? DateTime.SpecifyKind(v.Value, DateTimeKind.Utc) : v
+            );
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                var properties = entityType.ClrType.GetProperties()
+                    .Where(p => p.PropertyType == typeof(DateTime) || p.PropertyType == typeof(DateTime?));
+
+                foreach (var property in properties)
+                {
+                    if (property.PropertyType == typeof(DateTime))
+                        modelBuilder.Entity(entityType.Name).Property(property.Name).HasConversion(dateTimeConverter);
+                    else
+                        modelBuilder.Entity(entityType.Name).Property(property.Name).HasConversion(nullableDateTimeConverter);
+                }
+            }
 
             modelBuilder.Entity<User>(entity =>
             {

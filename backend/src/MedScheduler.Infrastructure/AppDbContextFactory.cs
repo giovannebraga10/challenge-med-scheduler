@@ -15,6 +15,8 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
 
         var connectionString = $"Host={host};Database={db};Username={user};Password={password}";
 
+        Console.WriteLine(connectionString);
+
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
         optionsBuilder.UseNpgsql(connectionString);
 
