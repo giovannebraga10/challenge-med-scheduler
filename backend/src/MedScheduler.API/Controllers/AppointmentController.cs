@@ -3,6 +3,7 @@ using MedScheduler.Application.Commands;
 using MedScheduler.Application.Dtos;
 using MedScheduler.Application.Queries;
 using MedScheduler.Application.Queries.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 [Route("api/[controller]")]
